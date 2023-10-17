@@ -28,7 +28,7 @@ p.a.analytics();function b(){return r.a.createElement(r.a.Fragment,null,r.a.crea
 if (currentuser !== null){
 f.currentUser = currentuser;
 }
-}, 1000),r.a.createElement("p",null,"welcome! "+uuser))}function v(){return f.currentUser&&r.a.createElement("button",{className:"sign-out",onClick:function(){
+}, 1000),r.a.createElement("p",null,"welcome! "+uuser),r.a.createElement("p",null,"by xodmods Aleiwi©2023"))}function v(){return f.currentUser&&r.a.createElement("button",{className:"sign-out",onClick:function(){
 
 
 
