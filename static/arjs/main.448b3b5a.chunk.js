@@ -27,7 +27,7 @@ p.a.analytics();function b(){return r.a.createElement(r.a.Fragment,null,r.a.crea
 f.currentUser = user;
 }
 //alert("ويدروشات");
-}, 1000),r.a.createElement("p",null," مرحبا "+ user))}function v(){return f.currentUser&&r.a.createElement("button",{className:"sign-out",onClick:function(){
+}, 1000),r.a.createElement("p",null," مرحبا "+ user),r.a.createElement("p",null,"by xodmods Aleiwi©2023"))}function v(){return f.currentUser&&r.a.createElement("button",{className:"sign-out",onClick:function(){
 
 //alert("logged out");
 
