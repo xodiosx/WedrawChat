@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>draw</title>
+    <link rel="stylesheet" href="design.css" />
+  </head>
+  <body>
+    <div class="whoisdrawing">who is drawing...</div>
+    <div class="container">
+      <div class="block-drawing"></div>
+      <canvas class="drawing-area"></canvas>
+    </div>
+    <div class="tools">
+      <img
+        src="pn.png"
+        class="penActive"
+        style="border: 2px solid #000;"
+      />
+      <img
+        src="er.png"
+        class="eraserActive"
+      />
+      <img
+        src="xx.png"
+        class="clearAll"
+        onclick="firebase.database().ref('Drawing Book/Room324364/Cood').remove();firebase.database().ref('Drawing Book/Room324364/Reload').push('Reload Bitch');"
+      />
+      <input type="color" class="colorSelect" />
+    </div>
+    <script src="sweetalert.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBFgBSNiBJPNM37S2AoG-vaCaAjiK1e9QU",
+    authDomain: "p2paly.firebaseapp.com",
+    databaseURL: "https://p2paly-default-rtdb.firebaseio.com",
+    projectId: "p2paly",
+    storageBucket: "p2paly.appspot.com",
+    messagingSenderId: "561961092765",
+    appId: "1:561961092765:web:6bff5b88e25e3d68e3b674",
+    measurementId: "G-0WS6LNPJZW"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>

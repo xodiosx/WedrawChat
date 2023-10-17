@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Haifa designs</title>
+	
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width,minimum-scale=0.9, initial-scale=0.9, maximum-scale=0.9, user-scalable=1">
+    <!-- CSS
+  ================================================== -->
+
+<link rel="stylesheet" type="text/css" href="sweetalert.css">
+
+  </head>
+  
+
+    				<h2 > 
+	    					please wait,,,,,
+					
+				يرجى الانتظار،،،،
+</h2>
+<button class ="btn btn-default" id="logout">logout</button>
+   
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
+  
+  
+  const firebaseConfig = {
+    apiKey: "AIzaSyBFgBSNiBJPNM37S2AoG-vaCaAjiK1e9QU",
+    authDomain: "p2paly.firebaseapp.com",
+    databaseURL: "https://p2paly-default-rtdb.firebaseio.com",
+    projectId: "p2paly",
+    storageBucket: "p2paly.appspot.com",
+    messagingSenderId: "561961092765",
+    appId: "1:561961092765:web:6bff5b88e25e3d68e3b674",
+    measurementId: "G-0WS6LNPJZW"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+
+        
+        import {getDatabase, ref, get, set, child, update, remove}
+        from //Copy and Paste the URL from near the top of the CDN you pasted in from firebase
+"https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+      
+        
+
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword,signOut } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+
+const db = getDatabase();
+
+
+const auth = getAuth(app);
+
+const user = auth.currentUser;
+let currentuser = null;
+
+//alert("ok");
+console.log("log");
+ currentuser = JSON.parse(localStorage.getItem("user"));
+
+console.log(user)
+
+if (currentuser !== null){
+//alert("please wait");
+
+  console.log("logging out");
+
+logout();
+
+
+
+//window.location=("../");
+  
+} else {
+  // No user is signed in.
+
+if (currentuser == null){
+alert("please login first");
+//window.location=("Login/");
+}}
+if (user) {
+  
+   }
+
+var logoutt = document.querySelector("#logout");
+    
+
+logoutt.addEventListener('click', logout);
+
+ 
+
+function rrr(){
+var uidu = JSON.parse(localStorage.getItem("uid3"));
+var enterID = uidu;
+
+//alert(uidu);
+swal({
+  title: "done!",
+  text: "logged out successfully",
+  type: "success",
+  confirmButtonText: "ok"
+});
+            remove(ref(db, "uid/"+ enterID))
+            .then(()=>{
+                //alert("logged out");
+
+swal({
+  title: "تم!",
+  text: "تم تسجيل الخروج",
+  type: "success",
+  confirmButtonText: "موافق"
+});
+window.location=("Login/");
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+        }
+
+
+
+
+function logout(){
+
+ currentuser = JSON.parse(localStorage.getItem("user"));
+if (currentuser !== null){
+
+
+
+signOut(auth).then(() => {
+
+  // Sign-out successful.
+rrr();
+sessionStorage.removeItem("user", user);
+localStorage.removeItem("user", user);
+
+
+return;
+}).catch((error) => {
+ 
+
+});
+
+
+} else {
+alert ("not logged in")
+}
+}
+</script>
+<script src="sweetalert.min.js"></script>
+
+
+
+
+
+  </body>
+</html>
